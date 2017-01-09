@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="jstable.js"></script>
+	</head>
+	<body>
+		<div id="container1"></div>
+		<input type="button" value="Получить значения" onclick="console.log(tableInst1.getData());">
+		<div id="container2"></div>
+		<input type="button" value="Получить значения" onclick="console.log(tableInst2.getData());">
+		<script>
+			tableInst1 = jstable.create('container1', 3,3);
+			tableInst2 = jstable.create('container2', 3,3, {
+				values: [['Hellow',2,3],[6,7,8],[11,12,13]], 
+				titleCols: ['Первый столбец','Второй столбец','Третий столбец'],
+				titleRows: ['Первая строка','Вторая строка','Третяя строка']
+			});
+		</script>
+	</body>
+</html>
